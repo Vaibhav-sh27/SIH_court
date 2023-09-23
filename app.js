@@ -7,8 +7,9 @@ const session = require('express-session');
 const passport = require('passport');
 const express = require('express');
 const app = express();
+const path = require('path');
 
-//passport config
+//passport config 
 require('./config/passport')(passport);
 
 //db config
@@ -35,6 +36,7 @@ mongoose.connect
 //middleware
 /*static folder to serve html, css and imgs*/
 app.use(express.static(__dirname + '/public'));
+
 /*ejs*/
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
@@ -67,7 +69,7 @@ app.use
         res.locals.error = req.flash('error');
         next();
     }
-);
+); 
 
 //Routes
 app.use('/', require('./routes/index.js'));

@@ -25,9 +25,20 @@ router.get
 );
 
 
+
 router.get
 (
     '/home',
+    notIfLoggedIn,
+    (req, res) =>
+    {
+        res.render('HomeMain');
+    }
+);
+
+router.get
+(
+    '/log',
     notIfLoggedIn,
     (req, res) =>
     {

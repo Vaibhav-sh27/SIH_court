@@ -3,20 +3,17 @@
   "version": "1.0.0",
   "description": "A court case management website",
   "main": "app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HarshKapadia2/court_case_management_web_app.git"
-  },
-  "author": "Harsh Kapadia",
+  
+  "author": "Vaibhav",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HarshKapadia2/court_case_management_web_app/issues"
-  },
-  "homepage": "https://github.com/HarshKapadia2/court_case_management_web_app#readme",
+  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
